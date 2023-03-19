@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags wagtailimages_tags %}
+<style href="ktatos.css" ></style>
+{% block content %}
+<div id="Cform">
+    <span id="intro">
+        {{ page.intro|richtext }}
+    </span>
+    <div id="cimg" data-tilt>
+        {% image page.map_image fill-583x345 as img %}
+        <img src="{{ img.url }}" alt="IMG">
+    </div>
+    <form  action="/action_page.php">
+        <label id="lform" for="fname">YOUR EMAIL:</label><br>
+        <input type="email" id="fname"><br>
+        <label id="llabel" for="lname">YOUR MESSAGE:</label><br>
+        <input type="text" id="etext">
+    </form> 
+    <button id="sbutt" type="submit">SUBMIT</button>
+</div>
+  {% endblock content %}
+

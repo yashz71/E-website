@@ -1,0 +1,24 @@
+
+<style href="kratos.css" >
+</style>
+{% load static wagtailcore_tags wagtailimages_tags %}
+
+{% for card in self.cards %}
+
+{% image card.image max-320x200 as img %}
+
+<div class="luffy">
+<h1 id="nami">{{card.title}}</h1>
+<img id="logo" src="{{ img.url }}" alt="image">
+{% if card.text %}
+<p id="akon">{{card.text}}</p>
+{% endif %}
+<button id="lonk" ><a href="{{ card.link.url }}"> {{card.link.link_text}}</a>
+   
+</button>
+</div>
+
+
+
+{% endfor %}
+

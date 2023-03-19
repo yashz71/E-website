@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static wagtailcore_tags %}
+{% block content %}
+<div>
+    <form method="post" id="log" >
+        <label for="Name" class="logf">Full Name</label>
+        <label for="Email" class="logf">Your Email</label><br>
+        <input type="text" id="Name" required class="logi">
+        <input type="email" id="Email" required placeholder="example@gmail.com" class="logi"><br>
+        <label for="Password" id="Password" class="logsif">Your Password</label><br>
+        <input type="password" required id="logsi"><br>
+        <button id="logs">Submit</button>
+    </form>
+</div>
+<img src="/static/images/login.jpg" alt="" id="logd">
+
+{% endblock content %}
